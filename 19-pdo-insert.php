@@ -3,7 +3,7 @@
 try {
     $dsn="mysql:host=localhost;dbname=covid";//dsn: data source name , nombre origen de datos
     $user="root";//user : usuario
-    $pass="988467202r--";//pass : clave de usuario
+    $pass="";//pass : clave de usuario
     $db = new PDO($dsn, $user, $pass);
     echo "Hola base de datos tengo conexion\n";
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

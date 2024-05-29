@@ -23,22 +23,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Garraspera = array_key_exists("Garraspera",$_POST) ? $_POST['Garraspera'] : "0";
     $Garraspera = $Garraspera == "" ? "0" : $Garraspera;
     $fecha = $_POST['fecha'];
-   
+    $tiene_covid = 0;
+   $tiene_covid = $Presion_alta + $Fatiga + $Garraspera;
     if (empty($nombre) || empty($apellido) || empty($edad) || empty($talla) || empty($peso)) {
         echo "Todos los campos son obligatorios." ;
     }
-
-    if($tos== 1 || $fiebre == 1 || $disnea==1 || $dolor_muscular==1 ||
+    if ($tiene_covid == 3){
+        echo "usted tiene covid y "; 
+        
+    }
+    if ($Presion_alta==1 && $Fatiga==1 &&  $Garraspera==1){
+        $resultado = "tiene covid";
+    }
+    elseif($tos== 1 || $fiebre == 1 || $disnea==1 || $dolor_muscular==1 ||
     $gripe == 1 ||  $Presion_alta==1 || $Fatiga==1 ||  $Garraspera==1)  {
         $resultado = "1";
     }
+    
     else {
         $resultado ="0";
     }
 
     $servername = "localhost";
     $username = "root";
-    $password ="988467202r--";    
+    $password ="";    
     $dbname = "covid";    
     try{
         $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username,$password);
