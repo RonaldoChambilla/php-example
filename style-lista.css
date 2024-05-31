@@ -1,32 +1,54 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Estilos del formulario */
 form {
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 form label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
 form input[type="text"] {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin-bottom: 16px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-sizing: border-box;
 }
 
 form h2 {
     margin-top: 20px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+form input[type="checkbox"] {
+    margin-right: 10px;
 }
 
 form button[type="submit"] {
     padding: 12px 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     background-color: #4CAF50;
     color: white;
@@ -42,10 +64,11 @@ form button[type="submit"]:hover {
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
 table th, table td {
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ddd;
     text-align: left;
 }
@@ -56,4 +79,25 @@ table th {
 
 table tr:nth-child(even) {
     background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #0099cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #006699;
+    text-decoration: underline;
+}
+
+/* Estilos específicos para las acciones de la tabla */
+table td a {
+    margin-right: 10px;
 }
