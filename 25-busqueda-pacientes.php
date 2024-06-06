@@ -21,6 +21,11 @@
             <td>Tos</td>
             <td>Fiebre</td>
             <td>Disnea</td>
+            <td>Dolor muscular</td>
+            <td>Gripe</td>
+            <td>Precion alta</td>
+            <td>Fatiga</td>
+            <td>Garraspera</td>
             <td>Acciones</td>
         </tr>          
     </table>
@@ -47,22 +52,28 @@
 
                 <div class="modal-body">
                     <label for="name" class="form-label">Nombre:</label>
-                    <input type="text" class="form-control" id="name" name="name"/>
+                    <input type="text" class="form-control" id="nombre2" name="name"/>
 
                     <label for="edad" class="form-label">Edad:</label>
-                    <input type="number" class="form-control" id="edad" name="edad"/>
+                    <input type="number" class="form-control" id="edad2" name="edad"/>
 
                     <label for="talla" class="form-label">Talla:</label>
-                    <input type="number" class="form-control" id="talla" name="talla"/>
+                    <input type="number" class="form-control" id="talla2" name="talla"/>
 
                     <label for="peso" class="form-label">Peso:</label>
-                    <input type="number" class="form-control" id="peso" name="peso"/>
+                    <input type="number" class="form-control" id="peso2" name="peso"/>
 
                     <label class="form-label">Sintomas:</label><br>
-                    <label class="checkbox"><input type="checkbox" name="tos" id="tos" value="1"> Tos</label>
-                    <label class="checkbox"><input type="checkbox" name="fiebre" id="fiebre" value="1"> Fiebre</label>
-                    <label class="checkbox"><input type="checkbox" name="disnea" id="disnea" value="1"> Disnea</label><br>
-                    <button  type="button"> Guardar </button>
+                    <label class="checkbox"><input type="checkbox" name="tos" id="sintoma_tos" value="1"> Tos</label><br>
+                    <label class="checkbox"><input type="checkbox" name="fiebre" id="sintoma_fiebre" value="1"> Fiebre</label><br>
+                    <label class="checkbox"><input type="checkbox" name="disnea" id="sintoma_disnea" value="1"> Disnea</label><br>
+                    <label class="checkbox"><input type="checkbox" name="dolor_muscular" id="sintoma_dolor_muscular" value="1"> Dolot muscular</label><br>
+                    <label class="checkbox"><input type="checkbox" name="gripe" id="sintoma_gripe" value="1"> Gripe</label><br>
+                    <label class="checkbox"><input type="checkbox" name="precion_alta" id="sintoma_presion_alta" value="1"> Precion alta</label><br>
+                    <label class="checkbox"><input type="checkbox" name="fatiga" id="sintoma_fatiga" value="1"> fatiga</label><br>
+                    <label class="checkbox"><input type="checkbox" name="garraspera" id="sintoma_garraspera" value="1"> Garraspera</label><br>
+                    <button  type="button" onclick="actualizar();"> Guardar </button>
+                    <button  type="button" onclick="eliminar();"> Canselar </button>
 
                 </div>
             </div>
