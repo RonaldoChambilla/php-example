@@ -35,13 +35,39 @@ function agregarFilas(id,paciente) {
     "<td>"+paciente.sintoma_tos+"</td>"+
     "<td>"+paciente.sintoma_fiebre+"</td>"+
     "<td>"+paciente.sintoma_disnea+"</td>"+
-    "<td><button type='button' onclick=editar('"+paciente.nombres+"','"+paciente.edad+"');>Editar</button></td>"+
+    "<td><button type='button' onclick=editar('"+paciente.nombres+"','"+paciente.edad+"','"+paciente.talla_m+"','"+paciente.peso_kg+"','"+paciente.sintoma_tos+"','"+paciente.sintoma_fiebre+"','"+paciente.sintoma_disnea+"');>Editar</button></td>"+
     "<td><button type='button' onclick=eliminar('"+paciente.nombres+"','"+paciente.edad+"');>eliminar</button></td>"+
     "</tr>";
     $(id+" tr:last").after(html);
 }
  
-function editar(nombres,edad) {
+function editar(nombres,edad,talla_m,peso_kg,sintoma_tos,sintoma_fiebre,sintoma_disnea) {
     $('#exampleModal').modal('show');    
     $("#nombre2").val(nombres);
+    $("#edad2").val(edad);
+    $("#talla2").val(talla_m);
+    $("#peso2").val(peso_kg);
+    if (sintoma_tos == 1) {
+        $('#sintoma_tos').prop('checked', true);
+    } else {
+        $('#sintoma_tos').prop('checked', false);
+        }
+    if (sintoma_fiebre == 1) {
+        $('#sintoma_fiebre').prop('checked', true);
+    } else {
+        $('#sintoma_fiebre').prop('checked', false);
+        }
+    if (sintoma_disnea == 1) {
+        $('#sintoma_disnea').prop('checked', true);
+    } else {
+        $('#sintoma_disnea').prop('checked', false);
+        }
+    
 }
+$(document).ready(function() {
+    $('#exampleModal').on('hidden.bs.modal', function () {
+        $(this).find('input[type="text"]').val('');
+        $(this).find('input[type="number"]').val('');
+        $(this).find('input[type="checkbox"]').prop('checked', false);
+    });
+});

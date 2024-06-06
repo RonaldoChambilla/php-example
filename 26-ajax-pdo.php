@@ -4,7 +4,7 @@
         $nombre = $_POST["nombre"];
         $dsn="mysql:host=localhost;dbname=covid";
         $user="root";
-        $pass="";
+        $pass="988467202r--";
         $db = new PDO($dsn, $user, $pass);        
         $pacientes = $db->query("
         SELECT * FROM pacientes 

@@ -46,22 +46,22 @@
                 </div>
 
                 <div class="modal-body">
-                    <label for="name" class="form-label">Nombre:</label>
-                    <input type="text" class="form-control" id="name" name="name"/>
+                    <label for="name"  class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre2" name="name"/>
 
-                    <label for="edad" class="form-label">Edad:</label>
-                    <input type="number" class="form-control" id="edad" name="edad"/>
+                    <label for="edad"  class="form-label">Edad:</label>
+                    <input type="number" class="form-control" id="edad2" name="edad"/>
 
                     <label for="talla" class="form-label">Talla:</label>
-                    <input type="number" class="form-control" id="talla" name="talla"/>
+                    <input type="number"  class="form-control" id="talla2" name="talla"/>
 
-                    <label for="peso" class="form-label">Peso:</label>
-                    <input type="number" class="form-control" id="peso" name="peso"/>
+                    <label for="peso"  class="form-label">Peso:</label>
+                    <input type="number" class="form-control" id="peso2" name="peso"/>
 
                     <label class="form-label">Sintomas:</label><br>
-                    <label class="checkbox"><input type="checkbox" name="tos" id="tos" value="1"> Tos</label>
-                    <label class="checkbox"><input type="checkbox" name="fiebre" id="fiebre" value="1"> Fiebre</label>
-                    <label class="checkbox"><input type="checkbox" name="disnea" id="disnea" value="1"> Disnea</label><br>
+                    <label class="checkbox"><input type="checkbox" name="tos" id="sintoma_tos"         value="1"> Tos</label>
+                    <label class="checkbox"><input type="checkbox" name="fiebre" id="sintoma_fiebre"   value="1"> Fiebre</label>
+                    <label class="checkbox"><input type="checkbox" name="disnea" id="sintoma_disnea"   value="1"> Disnea</label><br>
                     <button  type="button"> Guardar </button>
 
                 </div>
