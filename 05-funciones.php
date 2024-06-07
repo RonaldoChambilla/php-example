@@ -35,9 +35,9 @@ function calcular($operador,$num1,$num2){
 
 
 
-echo obtenerSaludo("roger")."\n";
+echo obtenerSaludo("ronaldo")."\n";
 
-echo mostrarDatos("roger","jack",
+echo mostrarDatos("ronaldo","chambilla",
 
 "backend developer web","tercer semestre")."\n";
 echo "el total de la suma es:" .calcular("/",0,22);
